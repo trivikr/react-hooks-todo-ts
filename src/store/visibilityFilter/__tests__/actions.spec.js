@@ -1,10 +1,11 @@
-import * as actions from "../actions";
+import { setVisibilityFilter } from "../actions";
+import { VisibilityFilterType, VisibilityFilterActionType } from "../types";
 
 describe("todo actions", () => {
   it("setVisibilityFilter should create SET_VISIBILITY_FILTER action", () => {
-    expect(actions.setVisibilityFilter("active")).toEqual({
-      type: "SET_VISIBILITY_FILTER",
-      filter: "active"
+    expect(setVisibilityFilter(VisibilityFilterType.SHOW_ALL)).toEqual({
+      type: VisibilityFilterActionType.SET_VISIBILITY_FILTER,
+      filter: VisibilityFilterType.SHOW_ALL
     });
   });
 });
