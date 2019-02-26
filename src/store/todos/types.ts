@@ -1,14 +1,14 @@
-export interface Todo {
+export interface TodoType {
   id: number;
   text: string;
   completed: boolean;
 }
 
-export enum TodoActionTypes {
+export enum TodoActionType {
   ADD_TODO = "@@todo/ADD_TODO",
   TOGGLE_TODO = "@@todo/TOGGLE_TODO"
 }
 
 export type TodoAction =
-  | { type: TodoActionTypes.ADD_TODO; todo: Todo }
-  | { type: TodoActionTypes.TOGGLE_TODO; id: number };
+  | { type: TodoActionType.ADD_TODO; todo: TodoType }
+  | { type: TodoActionType.TOGGLE_TODO; id: number };

@@ -1,6 +1,6 @@
 import React from "react";
 import Todo from "./Todo";
-import { TodoType } from "./TodoType";
+import { TodoType } from "../store/todos/types";
 
 const TodoList: React.FC<{
   todos: TodoType[];

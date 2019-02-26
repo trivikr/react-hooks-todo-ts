@@ -1,5 +1,5 @@
 import { todosReducer } from "../reducer";
-import { TodoActionTypes } from "../types";
+import { TodoActionType } from "../types";
 
 const todo1 = {
   text: "Run the tests",
@@ -22,7 +22,7 @@ describe("todos reducer", () => {
     it("in empty list", () => {
       expect(
         todosReducer([], {
-          type: TodoActionTypes.ADD_TODO,
+          type: TodoActionType.ADD_TODO,
           todo: todo1
         })
       ).toEqual([todo1]);
@@ -32,7 +32,7 @@ describe("todos reducer", () => {
       const todoList = [todo1];
       expect(
         todosReducer(todoList, {
-          type: TodoActionTypes.ADD_TODO,
+          type: TodoActionType.ADD_TODO,
           todo: todo2
         })
       ).toEqual([...todoList, todo2]);
@@ -46,7 +46,7 @@ describe("todos reducer", () => {
         const toggleTodo = { ...todo1, id: toggleTodoId, completed: false };
         expect(
           todosReducer([toggleTodo], {
-            type: TodoActionTypes.TOGGLE_TODO,
+            type: TodoActionType.TOGGLE_TODO,
             id: toggleTodoId
           })
         ).toEqual([{ ...toggleTodo, completed: true }]);
@@ -57,7 +57,7 @@ describe("todos reducer", () => {
         const toggleTodo = { ...todo1, id: toggleTodoId, completed: true };
         expect(
           todosReducer([toggleTodo], {
-            type: TodoActionTypes.TOGGLE_TODO,
+            type: TodoActionType.TOGGLE_TODO,
             id: toggleTodoId
           })
         ).toEqual([{ ...toggleTodo, completed: false }]);
@@ -66,10 +66,9 @@ describe("todos reducer", () => {
 
     it("when ID is not present", () => {
       const toggleTodoId = 5;
-      const toggleTodo = { ...todo1, id: toggleTodoId };
       expect(
         todosReducer([], {
-          type: TodoActionTypes.TOGGLE_TODO,
+          type: TodoActionType.TOGGLE_TODO,
           id: toggleTodoId
         })
       ).toEqual([]);

@@ -1,8 +1,8 @@
-import { TodoActionTypes } from "./types";
+import { TodoActionType } from "./types";
 
 let nextTodoId = 0;
 export const addTodo = (text: string) => ({
-  type: TodoActionTypes.ADD_TODO,
+  type: TodoActionType.ADD_TODO,
   todo: {
     id: nextTodoId++,
     completed: false,
@@ -11,6 +11,6 @@ export const addTodo = (text: string) => ({
 });
 
 export const toggleTodo = (id: number) => ({
-  type: TodoActionTypes.TOGGLE_TODO,
+  type: TodoActionType.TOGGLE_TODO,
   id
 });

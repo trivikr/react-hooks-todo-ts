@@ -3,7 +3,7 @@ import { toggleTodo } from "../store/todos/actions";
 import TodoList from "../components/TodoList";
 import { VisibilityFilter } from "../store/visibilityFilter/types";
 import StoreContext from "../store/StoreContext";
-import { TodoType } from "../components/TodoType";
+import { TodoType } from "../store/todos/types";
 
 const getVisibleTodos = (todos: TodoType[], filter: VisibilityFilter) => {
   switch (filter) {
