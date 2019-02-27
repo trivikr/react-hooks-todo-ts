@@ -1,5 +1,5 @@
-import { TodoType, TodoActionType, TodoAction } from "./types";
 import { Reducer } from "react";
+import { TodoType, TodoAction, TodoActionType } from "./types";
 
 const reducer: Reducer<TodoType[], TodoAction> = (state = [], action) => {
   switch (action.type) {
