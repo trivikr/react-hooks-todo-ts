@@ -6,11 +6,9 @@ import { Reducer, ReducerAction } from "react";
 const rootReducer: Reducer<StoreType, ReducerAction<any>> = (
   state: StoreType = getDefaultStoreType(),
   action: any = {}
-) => {
-  return {
-    visibilityFilter: visibilityFilterReducer(state.visibilityFilter, action),
-    todos: todosReducer(state.todos, action)
-  };
-};
+) => ({
+  visibilityFilter: visibilityFilterReducer(state.visibilityFilter, action),
+  todos: todosReducer(state.todos, action)
+});
 
 export default rootReducer;
