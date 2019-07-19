@@ -1,6 +1,6 @@
 This project experiments with writing a ToDo App with React Hooks and TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## How to run this project
 
