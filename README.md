@@ -6,5 +6,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Fork this repo
 - Clone it on your machine
-- Run `yarn` or `npm install` to install dependencies
-- Run `yarn start` or `npm run start` to start the server
+- Run `yarn` to install dependencies
+- Run `yarn start` to start the server
